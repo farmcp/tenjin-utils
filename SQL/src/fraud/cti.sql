@@ -23,7 +23,7 @@ FROM (
   ON c.ad_network_id = an.id
   LEFT OUTER JOIN apps a 
   ON c.app_id = a.id
-  WHERE e.event = 'open' AND c.ad_network_id IN (102,42) AND acquired_at >= '@START_DATE' and acquired_at < '@END_DATE'
+  WHERE e.event = 'open' AND c.ad_network_id = '@AD_NETWORK_ID' AND acquired_at >= '@START_DATE' and acquired_at < '@END_DATE'
   AND a.bundle_id = '@BUNDLEID'
   GROUP BY 1,2,3,4,5
 ) AS e
