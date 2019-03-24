@@ -19,7 +19,7 @@ FROM (
     ON c.ad_network_id = an.id
     LEFT OUTER JOIN apps a
     ON c.app_id = a.id
-    WHERE install_date >= '2019-02-01' AND a.id in ('f2ca29c6-73a6-4d85-ac64-4a44148155ae','126ffec8-e37d-4b01-ab12-34f3e7f32457')
+    WHERE install_date >= '2019-02-01' AND a.id in (@APPID)
     GROUP BY 1,2,3,4,5
 ) a
 ORDER BY 1,2,3,4,5;
