@@ -1,4 +1,4 @@
-/* Construct a cummulative x-day LTV curve for users that have purchased something in the app. 
+/* Construct a cumulative x-day LTV curve for users that have purchased something in the app.
  * Replace @BUNDLEID with your app's bundle_id or pacakage name.
  */
 SELECT
